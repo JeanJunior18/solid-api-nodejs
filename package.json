@@ -5,12 +5,13 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "start": "node build/index.js",
+    "start": "pm2-runtime build/index.js",
     "dev": "nodemon src/index.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "pm2": "^5.1.0",
     "typescript": "^4.3.5"
   },
   "devDependencies": {
