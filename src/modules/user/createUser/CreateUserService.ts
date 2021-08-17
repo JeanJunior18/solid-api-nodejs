@@ -1,5 +1,5 @@
-import { User } from '../../entities/User';
-import { IUserRepositories } from '../../repositories/IUserRepositories';
+import { User } from '../../../entities/User';
+import { IUserRepositories } from '../../../repositories/IUserRepositories';
 
 class CreateUserService {
   constructor(private userRepositories: IUserRepositories) {}

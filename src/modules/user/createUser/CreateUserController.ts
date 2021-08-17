@@ -15,7 +15,7 @@ export class CreateUserController {
       const { name, email, username } = req.body;
       const user = await this.createUser.execute({ name, email, username });
 
-      return res.json(user);
+      return res.status(201).json(user);
     } catch (err) {
       return next(err);
     }
