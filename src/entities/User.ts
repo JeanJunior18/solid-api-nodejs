@@ -3,11 +3,13 @@ export class User {
   name: string;
   username: string;
   email: string;
+  teams: string[];
 
-  private constructor({ name, username, email }: User) {
+  private constructor({ name, username, email, teams }: User) {
     this.name = name;
     this.username = username;
     this.email = email;
+    this.teams = teams;
   }
 
   static create(data: User): User {

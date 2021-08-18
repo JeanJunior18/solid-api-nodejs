@@ -16,6 +16,7 @@ describe('Create User', () => {
       username: 'test',
       name: 'test',
       email: 'test@jest.com',
+      teams: ['dev'],
     };
 
     const user = await createUserService.execute(userTest);
@@ -29,12 +30,14 @@ describe('Create User', () => {
       username: 'testDuplicate',
       name: 'testDuplicate',
       email: 'duplicated@jest.com',
+      teams: ['dev'],
     };
 
     const userTest2 = {
       username: 'testDuplicate',
       name: 'testDuplicate',
       email: 'duplicated@jest.com',
+      teams: ['dev'],
     };
 
     await createUserService.execute(userTest1);

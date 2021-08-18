@@ -12,8 +12,13 @@ export class CreateUserController {
     next: NextFunction,
   ): Promise<Response | void> {
     try {
-      const { name, email, username } = req.body;
-      const user = await this.createUser.execute({ name, email, username });
+      const { name, email, username, teams } = req.body;
+      const user = await this.createUser.execute({
+        name,
+        email,
+        username,
+        teams,
+      });
 
       return res.status(201).json(user);
     } catch (err) {
