@@ -11,7 +11,6 @@ export class User {
   }
 
   static create(data: User): User {
-    const user = new User(data);
-    return user;
+    return new User(data);
   }
 }
